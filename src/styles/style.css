@@ -100,7 +100,7 @@ footer {
 }
 
 .close-menu {
-  background: url(/src/assets/images/close.svg);
+  background: url(./src/assets/images/close.svg);
   background-repeat: no-repeat;
   width: 30px;
   height: 30px;
@@ -135,7 +135,7 @@ nav.open {
 }
 
 section {
-  background: url(/src/assets/images/rain_bk2.png);
+  background: url(./src/assets/images/rain_bk2.png);
   height: 100vh;
   color: var(--color-white);
   text-align: center;
@@ -212,7 +212,7 @@ section {
   justify-content: center;
   align-items: center;
   position: relative;
-  background: url(/src/assets/images/arrow-up.svg) var(--color-white) no-repeat center;
+  background: url(./src/assets/images/arrow-up.svg) var(--color-white) no-repeat center;
 }
 
 .more::after {
@@ -224,7 +224,7 @@ section {
 
 .info {
   font-size: 1.5rem;
-  background: url(/src/assets/images/image.png) no-repeat;
+  background: url(./src/assets/images/image.png) no-repeat;
   background-size: cover;
   min-height: 340px;
   padding: 80px 36px;
@@ -241,7 +241,7 @@ section {
 
 .info p::after, .info p::before {
   content: '';
-  background: url(/src/assets/images/quotes.svg);
+  background: url(./src/assets/images/quotes.svg);
   position: absolute;
   width: 23px;
   height: 23px;
@@ -289,7 +289,7 @@ section {
   content: '';
   width: 100%;
   height: 100%;
-  background: url(/src/assets/images/lightning.png);
+  background: url(./src/assets/images/lightning.png);
   background-repeat: no-repeat;
 }
 

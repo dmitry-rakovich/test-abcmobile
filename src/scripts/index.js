@@ -37,7 +37,7 @@ function printQuestion(index) {
         <div class="loading-bar" style="width: ${loadingPercent}%"></div>
     </div>
     <h2>${question}</h2>
-    ${img ? `<img src="${img}"/>` : ""}
+    ${img ? `<img src=".${img}"/>` : ""}
     <form>
     <div
         class="${

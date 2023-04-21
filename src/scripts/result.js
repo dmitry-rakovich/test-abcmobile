@@ -28,7 +28,7 @@ function printResult() {
       </p>
       <p class="color-green">Звоните скорее, запись доступна всего <span class="timer">10.00</span> минут</p>
       <button class="call-button bold" value="https://swapi.dev/api/people/1/">
-        <img src="/src/assets/images/call.svg" alt="">
+        <img src="./src/assets/images/call.svg" alt="">
         <span>Позвонить и прослушать результат</span>
       </button>
     </section>
@@ -40,12 +40,12 @@ function printResult() {
 export function toggleHeader (str) {
   if(str === 'start') {
     document.querySelector('.header-title').innerHTML = `
-    <img src="/src/assets/images/brain-blue.svg" width="40" height="40">
+    <img src="./src/assets/images/brain-blue.svg" width="40" height="40">
     <span class="upper-case">тест на определеніе iq</span>
     `
   } else {
     document.querySelector('.header-title').innerHTML = `
-    <img src="/src/assets/images/brain-blue.svg" width="40" height="40">
+    <img src="./src/assets/images/brain-blue.svg" width="40" height="40">
     <span class="upper-case">готово!</span>
     `
   }
