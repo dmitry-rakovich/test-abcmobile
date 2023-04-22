@@ -26,7 +26,7 @@ function printResult() {
         В целях защиты персональных 
         данных результат теста, их подробная интерпретация и рекомендации доступны в виде голосового сообщения по звонку с вашего мобильного телефона
       </p>
-      <p class="color-green">Звоните скорее, запись доступна всего <span class="timer">10.00</span> минут</p>
+      <p class="color-green">Звоните скорее, запись доступна всего <span class="timer">10:00</span> минут</p>
       <button class="call-button bold" value="https://swapi.dev/api/people/1/">
         <img src="./src/assets/images/call.svg" alt="">
         <span>Позвонить и прослушать результат</span>
@@ -35,6 +35,7 @@ function printResult() {
     `
     toggleHeader('finish')
     handleCall()
+    startTimer()
 }
 
 export function toggleHeader (str) {
@@ -73,4 +74,28 @@ async function getResponse(e) {
     
   }
   document.querySelectorAll('.link').forEach(item => item.addEventListener('click', (e) => getResponse(e)))
+}
+
+
+  
+
+function startTimer() {
+  let seconds = 600;
+  let timer = document.querySelector('.timer');
+  let intervalId;
+  intervalId = setInterval(() => {
+    seconds--;
+    timer.innerHTML = secondsToTime(seconds);
+    if (seconds === 0) {
+      clearInterval(intervalId);
+      timer.parentElement.innerHTML = 'Время вышло. Пройдите тест заново'
+      document.querySelector('.call-button').disabled = true
+    }
+  }, 1000);
+}
+
+function secondsToTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+  return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
 }
